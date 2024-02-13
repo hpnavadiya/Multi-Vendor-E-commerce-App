@@ -6,13 +6,13 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://multi-vendor-e-commerce-app-shopo.vercel.app',
   credentials: true
 }));
 
 app.use(express.json());
 app.use(cookieParser());
-app.use("/", (req, res) => {
+app.use("/test", (req, res) => {
   res.send("Hello world!");
 });
 app.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
